@@ -1,8 +1,7 @@
 name: 测试 7.0.1-42218
 
 on: workflow_dispatch
-  [push]
-
+#   [push]
 
 jobs:
   build:
