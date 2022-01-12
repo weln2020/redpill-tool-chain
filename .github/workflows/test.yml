@@ -1,6 +1,7 @@
 name: 测试构建
 
-on: [push]
+on:
+#  [push]
 
 jobs:
   build:
