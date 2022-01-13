@@ -1,4 +1,4 @@
-name: 测试构建 apollolake 6.2.4-25556
+name: test
 
 on: workflow_dispatch
 
