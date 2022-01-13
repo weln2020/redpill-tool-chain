@@ -1,7 +1,6 @@
-name: 测试构建
+name: 测试构建 apollolake 6.2.4-25556
 
-on:
-#  [push]
+on: workflow_dispatch
 
 jobs:
   build:
@@ -11,18 +10,19 @@ jobs:
       fail-fast: false
       matrix:
        include:
-         - platform: bromolow
-           version: 6.2.4-25556
-         - platform: bromolow
-           version: 7.0-41222
-         - platform: bromolow
-           version: 7.0.1-42218
+#         - platform: bromolow
+#           version: 6.2.4-25556
+#         - platform: bromolow
+#           version: 7.0-41222
+#         - platform: bromolow
+#           version: 7.0.1-42218
          - platform: apollolake
            version: 6.2.4-25556
-         - platform: apollolake
-           version: 7.0-41890
-         - platform: apollolake
-           version: 7.0.1-42218
+#         - platform: apollolake
+#           version: 7.0-41890
+#         - platform: apollolake
+#           version: 7.0.1-42218
+
     steps:
       - name: 准备结束
         uses: actions/checkout@v2
@@ -56,5 +56,3 @@ jobs:
           name: dsm-${{matrix.platform}}-${{matrix.version}}
           path: images/redpill-DS[39]*.img
           if-no-files-found: error
-
-
